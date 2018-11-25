@@ -102,12 +102,12 @@ html, body {
 
 .ref-menu-active {
 	border: 2px  #ffffff solid;
-	border-radius: 20px;
+	border-radius: 20px/25px;
 }
 
 .ref-menu:hover, .logo:hover {
     background-color: rgba(255,255,255, .5);
-	border-radius: 20px;
+    border-radius: 20px/25px;	
 }
 
 .person-photo {
@@ -278,6 +278,11 @@ html, body {
 
 }
 
+
+.extra-margin-bottom {
+	margin-bottom: 140px;
+}
+
 .input-group {
 	background-color: #ffffff;
 	border: 1px solid #e9e9e9;
@@ -298,6 +303,7 @@ html, body {
     outline: none;
 	width: 230px;
 	font-style: italic;
+	color: #b5b5b5;
 }
 
 .input-icon {
@@ -515,13 +521,19 @@ html, body {
 
 .data-block-data {
 	position: relative;
-	margin: 10px 0;
+	margin: 15px 0;
+	margin-right: 30px;
 } 
+
+.margin-after-day {
+	margin-bottom: 50px;
+}
+
 .data-block-data::after{
 	content: '';
 	display: block;
 	position: absolute;
-	right: -10px;
+	right: -20px;
 	top: 7px;
 	height: 7px;
 	width: 9px;
@@ -532,7 +544,7 @@ html, body {
 .input-group-form {
 	background-color: #ffffff;
 	border: 1px solid #d5d57d;
-	min-width: 595px;
+	width: 600px;
 	display: flex;
 	float: left;
 	height: 70px;
@@ -635,7 +647,8 @@ html, body {
 	background-color: #f5e99e;
 	height: 40px;
 	width: 200px;
-	margin-left: 420px;
+	margin-left: 390px;
+	margin-bottom: 5px;
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
@@ -644,7 +657,7 @@ html, body {
 	color: #d8cb7d;
 	position: relative;
 	line-height: 40px;
-	padding: 0 5px;
+	padding: 0 10px;
 	font-weight: bold;
 }
 
@@ -664,7 +677,7 @@ html, body {
 	background-color: #f5e99e;
 	height: 45px;
 	width: 570px;
-	margin-left: 50px;
+	margin: auto;
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
@@ -690,14 +703,72 @@ html, body {
 	height: 65px;
 	margin: 10px auto 50px auto;
 	border-radius: 5px;
-	border: 3px #d8cb7d dashed;
+	position: relative;
 }
+
+.border-top-bottom-destination::before {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 3px;
+	width: 99%;
+	background-image: linear-gradient(to right, #e8e897 50%, #ffffa6 50%);
+	background-size: 15px 3px;
+	background-repeat: repeat-x;
+	background-position: top;
+	top: -3px;
+	left: 3px;
+}
+
+.border-top-bottom-destination::after {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 3px;
+	width: 99%;
+	background-image: linear-gradient(to right, #e8e897 50%, #ffffa6 50%);
+	background-size: 15px 3px;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	bottom: -3px;
+	left: 3px;
+}
+
+.border-right-left-destination::before {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 90%;
+	width: 3px;
+	background-image: linear-gradient(to top, #e8e897 50%, #ffffa6 50%);
+	background-size: 3px 15px;
+	background-repeat: repeat-y;
+	background-position: right;
+	bottom: 3px;
+	right: -3px;
+}
+
+.border-right-left-destination::after {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 90%;
+	width: 3px;
+	background-image: linear-gradient(to top, #e8e897 50%, #ffffa6 50%);
+	background-size: 3px 15px;
+	background-repeat: repeat-y;
+	background-position: left;
+	bottom: 3px;
+	left: -3px;
+}
+
 
 .new-destination-text {
 	color: #aea25c;
 	line-height: 65px;
 	text-align: center;
 	font-size: 16px;
+	position: relative;
 }
 
 .dest-list {
